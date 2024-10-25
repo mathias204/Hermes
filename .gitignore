@@ -1,7 +1,22 @@
 node_modules/
 build/
 coverage/
-assets/databaseJSON/
+assets/databaseJSON/*
+file-sharing/received/*
+file-sharing/to-send/*
+!file-sharing/received/.gitkeep
+!file-sharing/to-send/.gitkeep
+!assets/databaseJSON/.gitkeep
+src/playground
+src/test
+src/main/playground
+assets/textfiles-huffman
+
+# Ignore E2EE keys and secrets
+assets/encryption/keys/*
+!assets/encryption/keys/.gitkeep
+assets/encryption/secrets/*
+!assets/encryption/secrets/.gitkeep
 
 .DS_Store
 Thumbs.db
@@ -13,3 +28,13 @@ Thumbs.db
 .vscode/
 
 tsconfig.tsbuildinfo
+
+# Ignore sensitive certificates/keys, localhost-server and CA can stay on git (debug, no production uses)
+src/main/certificates/
+
+
+src/main/playground/data
+src/main/playground/data_message
+
+src/test/playground/data
+src/test/playground/data_message
